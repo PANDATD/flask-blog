@@ -14,5 +14,13 @@
     <body>
          <center> Welcome to CodderscluB </center>
          <hr>
+         <div class="posts">
+            {% for post in posts%} 
+            <h1> {{post.name}} </h1>
+            <p>{{post.date}}</p>
+            <hr>
+            <p>{{post.content}}</p>
+            {% endfor %}
+         </div>
     </body>
 </html>
