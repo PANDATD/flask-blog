@@ -10,17 +10,45 @@
         <title>CodderscluB</title>
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
 
+    <style>
+        .posts{
+        padding: auto;
+        margin-block: 20px;
+        block-size: 75px;
+        }
+        h1{
+            text-align:left;
+            text-decoration: none;
+            text-transform: capitalize;
+            text-rendering: geometricPrecision;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+            font-style: normal;
+        }
+        p{
+            font-family:monospace;
+            text-size-adjust:auto;
+            text-align: left;
+            font-size: 15px;
+            font-feature-settings: normal;
+            font-weight: normal;
+        }
+        article{
+            padding: 20px;
+            margin-block: 30px;
+            letter-spacing: 1.2px;
+        }
+    </style>
     </head>
     <body>
-         <center> Welcome to CodderscluB </center>
-         <hr>
-         <div class="posts">
-            {% for post in posts%} 
-            <h1> {{post.name}} </h1>
-            <p>{{post.date}}</p>
-            <hr>
-            <p>{{post.content}}</p>
-            {% endfor %}
-         </div>
+        <center> Welcome to CodderscluB </center>
+        <div class="posts">
+            <article>
+                {% for post in posts %} 
+                <h1> <strong>Auther</strong> {{ post.name }} </h1>
+                <p> <strong>Postted on </strong> {{ post.date }} </p>
+                <p>{{ post.content }} </p>
+                {% endfor %}
+                </article>          
+        </div>
     </body>
 </html>
